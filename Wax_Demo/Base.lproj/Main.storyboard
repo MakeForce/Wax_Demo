@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
+        <capability name="Alignment constraints with different attributes" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--ViewController-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" title="原生" useStoryboardIdentifierAsRestorationIdentifier="YES" id="BYZ-38-t0r" userLabel="ViewController" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="alQ-Vg-KPb">
+                                <rect key="frame" x="200" y="285" width="90" height="30"/>
+                                <state key="normal" title="获取脚本文件"/>
+                                <connections>
+                                    <action selector="TestPushWax:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N78-tZ-MWg"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="hJB-gX-Xky">
+                                <rect key="frame" x="20" y="28" width="560" height="237"/>
+                                <color key="backgroundColor" red="0.65098039220000004" green="1" blue="0.98039215690000003" alpha="0.87095905169999999" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="6"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1E0-eL-3dP">
+                                <rect key="frame" x="310" y="285" width="75" height="30"/>
+                                <state key="normal" title="执行并进入"/>
+                                <connections>
+                                    <action selector="doing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fXn-y9-mWc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="alQ-Vg-KPb" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Ebe-Qu-0NW"/>
+                            <constraint firstItem="1E0-eL-3dP" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="10" id="QCp-LZ-pJW"/>
+                            <constraint firstItem="hJB-gX-Xky" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="bdx-83-FTe"/>
+                            <constraint firstItem="alQ-Vg-KPb" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="centerX" constant="-10" id="gD7-jQ-77B"/>
+                            <constraint firstAttribute="trailing" secondItem="hJB-gX-Xky" secondAttribute="trailing" constant="20" id="gdg-HM-VQ8"/>
+                            <constraint firstItem="1E0-eL-3dP" firstAttribute="top" secondItem="hJB-gX-Xky" secondAttribute="bottom" constant="20" id="ggL-nO-qOw"/>
+                            <constraint firstItem="1E0-eL-3dP" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="lzd-7k-CW6"/>
+                            <constraint firstItem="hJB-gX-Xky" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="20" id="oAN-n0-dZO"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="7MI-SL-Jv6"/>
+                    <connections>
+                        <outlet property="textView" destination="hJB-gX-Xky" id="hek-4s-trq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
